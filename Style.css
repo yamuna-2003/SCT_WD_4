@@ -1,0 +1,183 @@
+/* Reset and basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1c1c1c, #3a3a3a);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-attachment: fixed;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slideDown 1.2s ease-in-out;
+}
+
+.header .logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  font-family: 'Fauna One', serif;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-shadow: 0px 2px 4px rgba(255, 0, 0, 0.3);
+}
+
+.header h3 {
+  font-family: 'Lobster', cursive;
+  font-style: italic;
+  font-size: 1.7rem;
+  color: #ffcc80;
+}
+
+/* Container */
+.container {
+  max-width: 400px;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 8px 32px rgba(255, 141, 2, 0.37);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  animation: popIn 1.5s ease-in-out;
+}
+
+.container h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#task-input,
+#task-time {
+  width: 80%;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#task-input::placeholder,
+#task-time::placeholder {
+  color: #e0e0e0;
+}
+
+#task-input:focus,
+#task-time:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #ffcc80;
+  box-shadow: 0px 4px 8px rgba(255, 204, 128, 0.6);
+}
+
+#add-btn {
+  padding: 10px 20px;
+  font-family: Cinzel, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff9800, #ffcc80);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#add-btn:hover {
+  background: linear-gradient(135deg, #ffcc80, #ff9800);
+  transform: scale(1.1);
+}
+
+/* Task Container */
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.task-container .task-item {
+  padding: 15px 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.15));
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.task-container .task-item .task-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-container .task-item .task-details .task-name {
+  font-weight: bold;
+}
+
+.task-container .task-item .task-details .task-time {
+  font-size: 0.9rem;
+  color: #ffcc80;
+}
+
+.task-container .task-item .delete-btn {
+  background: none;
+  border: none;
+  color: #ffcc80;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
